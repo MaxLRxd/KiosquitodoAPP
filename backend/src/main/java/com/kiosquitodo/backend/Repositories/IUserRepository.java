@@ -7,7 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.kiosquitodo.backend.Models.Producto;
 
 public interface IUserRepository extends JpaRepository<Producto, Long>{
-    Optional<Producto> findByName(String nombre);
-    Optional<Producto> findByPrice(double precio);
-    boolean existsByName(String nombre);
+    Optional<Producto> findByNombre(String nombre);
+    Optional<Producto> findByPrecio(double precio);
+    Optional<Producto> findByCantidad(int cantidad);
+    boolean existsByNombre(String nombre);
 }
